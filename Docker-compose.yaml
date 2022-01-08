@@ -1,0 +1,20 @@
+
+version: '3.4'
+
+services:
+  mulews:
+    image: jetbotws
+    network_mode: "host"
+    privileged: true
+    volumes:
+      - ~/ws/jetbot_ws:/ws
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    devices:
+      - /dev/i2c-1:/dev/i2c-1
+      - /dev/bus/usb:/dev/bus/usb
+      - /dev/ttyTHS1:/dev/ttyTHS1
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: /bin/sh -c "while sleep 1000; do :; done"
