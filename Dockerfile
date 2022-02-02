@@ -13,6 +13,7 @@ RUN wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/nul
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         gdb
+        libi2c-dev
 
 
 ENTRYPOINT ["./ros_entrypoint.sh"]
