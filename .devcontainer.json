@@ -1,0 +1,9 @@
+{
+    "name": "jetbot",
+    "dockerComposeFile": "./Docker-compose.yaml",
+    "extensions": [
+        "ms-iot.vscode-ros"
+    ],
+    "workspaceFolder": "./ws",
+    "shutdownAction": "stopCompose"
+}

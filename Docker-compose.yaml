@@ -2,12 +2,16 @@
 version: '3.4'
 
 services:
-  mulews:
+  jetbotws:
     image: jetbotws
     network_mode: "host"
     privileged: true
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined   
     volumes:
-      - ~/ws/jetbot_ws:/ws
+      - ./ws:/ws
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     devices:
