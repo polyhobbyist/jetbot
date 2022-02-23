@@ -2,4 +2,4 @@ repositories:
   ros_qwiic_servo:
     type: git
     url: https://github.com/polyhobbyist/ros_qwiic_servo
-    version: master
+    version: main

@@ -15,9 +15,7 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     devices:
-      - /dev/i2c-1:/dev/i2c-1
-      - /dev/bus/usb:/dev/bus/usb
-      - /dev/ttyTHS1:/dev/ttyTHS1
+      - /dev:/dev
     build:
       context: .
       dockerfile: ./Dockerfile
