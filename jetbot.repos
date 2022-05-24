@@ -3,3 +3,15 @@ repositories:
     type: git
     url: https://github.com/polyhobbyist/ros_qwiic_servo
     version: main
+  ros_qwiic_motor:
+    type: git
+    https://github.com/polyhobbyist/ros_qwiic_motor
+    version: main
+  ros_qwiic_ICM_20948:
+    type: git
+    https://github.com/polyhobbyist/ros_qwiic_ICM_20948
+    version: main
+  ros_qwiic_bme280:
+    type: git
+    https://github.com/polyhobbyist/ros_qwiic_bme280
+    version: main
