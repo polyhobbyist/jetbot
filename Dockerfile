@@ -1,6 +1,9 @@
 FROM ros:foxy
 
+# Dist upgrade - https://github.com/ros2/rosidl/issues/680#issuecomment-1125188129
+
 RUN apt-get update && \
+    apt dist-upgrade -y && \
     apt-get install -y --no-install-recommends \
         python-is-python3 \
 	libopencv-dev \
@@ -13,6 +16,9 @@ RUN apt-get update && \
         libcurl4-openssl-dev \
         libssl-dev \
         curl \
+        ros-foxy-imu-tools \
+        ros-foxy-teleop-twist-joy \
+        ros-foxy-rosbridge-server \
         libi2c-dev
 
 #RUN pip3 install --upgrade pip
