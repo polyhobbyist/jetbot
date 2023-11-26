@@ -1,4 +1,4 @@
-FROM ros:foxy
+FROM ros:humble
 
 # Dist upgrade - https://github.com/ros2/rosidl/issues/680#issuecomment-1125188129
 
@@ -16,11 +16,10 @@ RUN apt-get update && \
         libcurl4-openssl-dev \
         libssl-dev \
         curl \
-        ros-foxy-imu-tools \
-        ros-foxy-teleop-twist-joy \
-        ros-foxy-rosbridge-server \
+        ros-humble-imu-tools \
+        ros-humble-teleop-twist-joy \
         libi2c-dev \
-        ros-foxy-image-transport
+        ros-humble-image-transport
 
 
 ENTRYPOINT ["./ros_entrypoint.sh"]
