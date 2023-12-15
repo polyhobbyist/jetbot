@@ -21,6 +21,17 @@ RUN apt-get update && \
         libi2c-dev \
         ros-humble-image-transport
 
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+ENV NVM_DIR /root/.nvm
+ENV NODE_VERSION 20.10.0
+
+# install node and npm
+RUN . $NVM_DIR/nvm.sh \
+    && nvm install $NODE_VERSION \
+    && nvm alias default $NODE_VERSION \
+    && nvm use default
+
 
 ENTRYPOINT ["./ros_entrypoint.sh"]
 CMD [ "bash" ]
